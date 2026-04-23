@@ -41,6 +41,7 @@ export const products: Product[] = [
     category: "bijoux",
     price: 89,
     image: necklace,
+    images: [necklace, necklace2, necklace3],
     tagline: "Perle d'eau douce, chaîne or rosé 18k",
     description:
       "Une perle naturelle suspendue à une chaîne fine en or rosé. Pensée pour être portée seule ou superposée, elle accompagne chaque moment avec délicatesse.",
@@ -57,6 +58,7 @@ export const products: Product[] = [
     category: "bijoux",
     price: 65,
     image: rings,
+    images: [rings, rings2, rings3],
     tagline: "Deux anneaux fins or rosé",
     description:
       "Un duo épuré pensé pour s'empiler ou se porter séparément. La promesse d'un éclat discret au quotidien.",
@@ -73,6 +75,7 @@ export const products: Product[] = [
     category: "bijoux",
     price: 55,
     image: bracelet,
+    images: [bracelet, bracelet2, bracelet3],
     tagline: "Charme étoile, chaîne fine or rosé",
     description:
       "Un bracelet délicat orné d'un charme étoile, symbole de lumière. La signature parfaite d'un poignet élégant.",
@@ -89,6 +92,7 @@ export const products: Product[] = [
     category: "bijoux",
     price: 49,
     image: earrings,
+    images: [earrings, earrings2, earrings3],
     tagline: "Créoles épurées or rosé",
     description:
       "L'essentiel à porter tous les jours. Des créoles parfaitement équilibrées, douces sur l'oreille, lumineuses sur la peau.",
@@ -105,6 +109,7 @@ export const products: Product[] = [
     category: "ecouteurs",
     price: 149,
     image: earbudsHero,
+    images: [earbudsHero, earbudsPro2, earbudsPro3],
     tagline: "Écouteurs sans fil — finition or rosé mat",
     description:
       "Un design pensé comme un bijou. Réduction de bruit active, son haute définition et autonomie de 32 h. La technologie au service de l'élégance.",
@@ -121,6 +126,7 @@ export const products: Product[] = [
     category: "ecouteurs",
     price: 119,
     image: earbudsCase,
+    images: [earbudsCase, earbudsClassic2, earbudsClassic3],
     tagline: "Boîtier marbre & or rosé",
     description:
       "L'écoute confortable au quotidien dans un boîtier signature. Une pièce à exposer autant qu'à utiliser.",
@@ -137,6 +143,7 @@ export const products: Product[] = [
     category: "ecouteurs",
     price: 89,
     image: earbudSingle,
+    images: [earbudSingle, earbudsMini2, earbudsMini3],
     tagline: "Le plus compact de la collection",
     description:
       "Ultra léger, ultra discret. Le compagnon parfait pour les esprits libres qui ne se séparent jamais de leur musique.",
