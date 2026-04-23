@@ -1,10 +1,24 @@
 import necklace from "@/assets/necklace.jpg";
+import necklace2 from "@/assets/necklace-2.jpg";
+import necklace3 from "@/assets/necklace-3.jpg";
 import rings from "@/assets/rings.jpg";
+import rings2 from "@/assets/rings-2.jpg";
+import rings3 from "@/assets/rings-3.jpg";
 import bracelet from "@/assets/bracelet.jpg";
+import bracelet2 from "@/assets/bracelet-2.jpg";
+import bracelet3 from "@/assets/bracelet-3.jpg";
 import earrings from "@/assets/earrings.jpg";
+import earrings2 from "@/assets/earrings-2.jpg";
+import earrings3 from "@/assets/earrings-3.jpg";
 import earbudsHero from "@/assets/earbuds-hero.jpg";
+import earbudsPro2 from "@/assets/earbuds-pro-2.jpg";
+import earbudsPro3 from "@/assets/earbuds-pro-3.jpg";
 import earbudsCase from "@/assets/earbuds-case.jpg";
+import earbudsClassic2 from "@/assets/earbuds-classic-2.jpg";
+import earbudsClassic3 from "@/assets/earbuds-classic-3.jpg";
 import earbudSingle from "@/assets/earbud-single.jpg";
+import earbudsMini2 from "@/assets/earbuds-mini-2.jpg";
+import earbudsMini3 from "@/assets/earbuds-mini-3.jpg";
 
 export type Category = "bijoux" | "ecouteurs";
 
@@ -14,6 +28,7 @@ export type Product = {
   category: Category;
   price: number;
   image: string;
+  images: string[];
   tagline: string;
   description: string;
   details: string[];
