@@ -3,6 +3,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { CustomCursor } from "@/components/site/CustomCursor";
 import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
@@ -70,6 +71,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   return (
     <div className="min-h-screen bg-background">
+      <CustomCursor />
       <Header />
       <main>
         <Outlet />

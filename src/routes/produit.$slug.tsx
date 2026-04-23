@@ -62,29 +62,14 @@ function ProductPage() {
           </Link>
 
           <div className="mt-12 grid gap-16 lg:grid-cols-2 lg:gap-20">
-            {/* IMAGE 3D-ish */}
-            <Reveal>
-              <div
-                onMouseMove={onMove}
-                onMouseLeave={onLeave}
-                className="relative aspect-square overflow-hidden bg-muted"
-                style={{ perspective: "1200px" }}
-              >
-                <div
-                  className="h-full w-full transition-luxe"
-                  style={{
-                    transform: `rotateY(${tilt.x}deg) rotateX(${tilt.y}deg) scale(1.02)`,
-                  }}
-                >
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-rose-gold/10 via-transparent to-transparent" />
-              </div>
-            </Reveal>
+            {/* GALLERY 3D-ish */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <ProductGallery images={product.images} alt={product.name} />
+            </motion.div>
 
             {/* INFO */}
             <div className="flex flex-col justify-center">
@@ -117,7 +102,7 @@ function ProductPage() {
 
               <Reveal delay={400}>
                 <ul className="mt-8 space-y-3">
-                  {product.details.map((d) => (
+                  {product.details.map((d: string) => (
                     <li
                       key={d}
                       className="flex items-start gap-3 text-sm text-foreground"
