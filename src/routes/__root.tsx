@@ -37,11 +37,15 @@ export const Route = createRootRoute({
       { title: "Les Créations d'Auré — Bijoux & Écouteurs design" },
       { name: "description", content: "Bijoux faits main et écouteurs design or rosé. L'élégance comme signature, le détail comme philosophie." },
       { name: "author", content: "Les Créations d'Auré" },
-      { property: "og:title", content: "Les Créations d'Auré" },
-      { property: "og:description", content: "Bijoux faits main et écouteurs design — collection or rosé." },
+      { property: "og:title", content: "Les Créations d'Auré — Bijoux & Écouteurs design" },
+      { property: "og:description", content: "Bijoux faits main et écouteurs design or rosé. L'élégance comme signature, le détail comme philosophie." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Les Créations d'Auré — Bijoux & Écouteurs design" },
+      { name: "twitter:description", content: "Bijoux faits main et écouteurs design or rosé. L'élégance comme signature, le détail comme philosophie." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/357fa3b9-6e4a-4aa9-b69c-99c299dab9d6/id-preview-794f151a--b16d2fdc-65ef-4a14-b46c-13b359979a00.lovable.app-1776952542886.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/357fa3b9-6e4a-4aa9-b69c-99c299dab9d6/id-preview-794f151a--b16d2fdc-65ef-4a14-b46c-13b359979a00.lovable.app-1776952542886.png" },
     ],
     links: [
       {
