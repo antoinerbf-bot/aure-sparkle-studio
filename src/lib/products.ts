@@ -1,0 +1,138 @@
+import necklace from "@/assets/necklace.jpg";
+import rings from "@/assets/rings.jpg";
+import bracelet from "@/assets/bracelet.jpg";
+import earrings from "@/assets/earrings.jpg";
+import earbudsHero from "@/assets/earbuds-hero.jpg";
+import earbudsCase from "@/assets/earbuds-case.jpg";
+import earbudSingle from "@/assets/earbud-single.jpg";
+
+export type Category = "bijoux" | "ecouteurs";
+
+export type Product = {
+  slug: string;
+  name: string;
+  category: Category;
+  price: number;
+  image: string;
+  tagline: string;
+  description: string;
+  details: string[];
+};
+
+export const products: Product[] = [
+  {
+    slug: "collier-perle-aurore",
+    name: "Collier Aurore",
+    category: "bijoux",
+    price: 89,
+    image: necklace,
+    tagline: "Perle d'eau douce, chaîne or rosé 18k",
+    description:
+      "Une perle naturelle suspendue à une chaîne fine en or rosé. Pensée pour être portée seule ou superposée, elle accompagne chaque moment avec délicatesse.",
+    details: [
+      "Perle d'eau douce sélectionnée à la main",
+      "Chaîne plaquée or rosé 18 carats",
+      "Longueur ajustable 40-45 cm",
+      "Fait main dans notre atelier",
+    ],
+  },
+  {
+    slug: "anneaux-duo-soleil",
+    name: "Duo Soleil",
+    category: "bijoux",
+    price: 65,
+    image: rings,
+    tagline: "Deux anneaux fins or rosé",
+    description:
+      "Un duo épuré pensé pour s'empiler ou se porter séparément. La promesse d'un éclat discret au quotidien.",
+    details: [
+      "Lot de 2 anneaux",
+      "Plaqué or rosé 18 carats",
+      "Tailles disponibles : 50 à 58",
+      "Garanti sans nickel",
+    ],
+  },
+  {
+    slug: "bracelet-charme-etoile",
+    name: "Bracelet Étoile",
+    category: "bijoux",
+    price: 55,
+    image: bracelet,
+    tagline: "Charme étoile, chaîne fine or rosé",
+    description:
+      "Un bracelet délicat orné d'un charme étoile, symbole de lumière. La signature parfaite d'un poignet élégant.",
+    details: [
+      "Charme étoile en or rosé",
+      "Fermoir mousqueton ajustable",
+      "Longueur 16-19 cm",
+      "Hypoallergénique",
+    ],
+  },
+  {
+    slug: "creoles-luna",
+    name: "Créoles Luna",
+    category: "bijoux",
+    price: 49,
+    image: earrings,
+    tagline: "Créoles épurées or rosé",
+    description:
+      "L'essentiel à porter tous les jours. Des créoles parfaitement équilibrées, douces sur l'oreille, lumineuses sur la peau.",
+    details: [
+      "Diamètre 18 mm",
+      "Plaqué or rosé 3 microns",
+      "Fermoir cliquet sécurisé",
+      "Légères et confortables",
+    ],
+  },
+  {
+    slug: "ecouteurs-aura-pro",
+    name: "Aura Pro",
+    category: "ecouteurs",
+    price: 149,
+    image: earbudsHero,
+    tagline: "Écouteurs sans fil — finition or rosé mat",
+    description:
+      "Un design pensé comme un bijou. Réduction de bruit active, son haute définition et autonomie de 32 h. La technologie au service de l'élégance.",
+    details: [
+      "Réduction de bruit active",
+      "Bluetooth 5.3 — codec aptX",
+      "Autonomie 8h + 24h avec boîtier",
+      "Charge sans fil Qi",
+    ],
+  },
+  {
+    slug: "ecouteurs-aura-classic",
+    name: "Aura Classic",
+    category: "ecouteurs",
+    price: 119,
+    image: earbudsCase,
+    tagline: "Boîtier marbre & or rosé",
+    description:
+      "L'écoute confortable au quotidien dans un boîtier signature. Une pièce à exposer autant qu'à utiliser.",
+    details: [
+      "Bluetooth 5.2",
+      "Autonomie 6h + 18h",
+      "Boîtier finition marbre",
+      "Micros dual-array",
+    ],
+  },
+  {
+    slug: "ecouteurs-aura-mini",
+    name: "Aura Mini",
+    category: "ecouteurs",
+    price: 89,
+    image: earbudSingle,
+    tagline: "Le plus compact de la collection",
+    description:
+      "Ultra léger, ultra discret. Le compagnon parfait pour les esprits libres qui ne se séparent jamais de leur musique.",
+    details: [
+      "3,8g par écouteur",
+      "Bluetooth 5.2",
+      "Autonomie 5h + 15h",
+      "Résistance IPX4",
+    ],
+  },
+];
+
+export const getProductBySlug = (slug: string) =>
+  products.find((p) => p.slug === slug);
