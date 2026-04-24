@@ -274,29 +274,10 @@ function HomePage() {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-            {products.slice(0, 4).map((p, i) => (
-              <Reveal key={p.slug} delay={i * 80}>
-                <a
-                  href="https://www.instagram.com/lescreationsdaure_/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="image-zoom group relative block aspect-square overflow-hidden"
-                >
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-ink/0 transition-luxe group-hover:bg-ink/50" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-luxe group-hover:opacity-100">
-                    <Sparkles className="h-6 w-6 text-cream" />
-                  </div>
-                </a>
-              </Reveal>
-            ))}
-          </div>
+          <InstagramFeed
+            username="lescreationsdaure_"
+            fallbackImages={products.slice(0, 8).map((p) => ({ src: p.image, alt: p.name }))}
+          />
 
           <div className="mt-12 text-center">
             <a
