@@ -6,6 +6,7 @@ import atelier from "@/assets/atelier.jpg";
 import heroVideoMeta from "@/assets/hero-video.mp4.asset.json";
 import { ProductCard } from "@/components/site/ProductCard";
 import { Reveal } from "@/components/site/Reveal";
+import { InstagramFeed } from "@/components/site/InstagramFeed";
 import { products } from "@/lib/products";
 
 export const Route = createFileRoute("/")({
