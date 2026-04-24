@@ -74,8 +74,8 @@ function ProductPage() {
             {/* INFO */}
             <div className="flex flex-col justify-center">
               <Reveal>
-                <p className="text-xs uppercase tracking-[0.3em] text-primary">
-                  {product.category === "bijoux" ? "Bijoux" : "Écouteurs"}
+                <p className="text-xs uppercase tracking-[0.3em] text-primary capitalize">
+                  {product.category}
                 </p>
               </Reveal>
               <Reveal delay={100}>

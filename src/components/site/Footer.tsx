@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram, Mail, Facebook, Music2 } from "lucide-react";
 
 export function Footer() {
   return (
@@ -25,6 +25,24 @@ export function Footer() {
               <Instagram className="h-4 w-4" />
             </a>
             <a
+              href="https://www.tiktok.com/@lescreationsdaure"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-smooth hover:border-primary hover:text-primary"
+            >
+              <Music2 className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.facebook.com/lescreationsdaure"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-smooth hover:border-primary hover:text-primary"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a
               href="mailto:contact@lescreationsdaure.fr"
               aria-label="Email"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-smooth hover:border-primary hover:text-primary"
@@ -45,13 +63,18 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/boutique" search={{ cat: "bijoux" } as never} className="hover:text-primary transition-smooth">
-                Bijoux
+              <Link to="/boutique" search={{ cat: "bracelets" } as never} className="hover:text-primary transition-smooth">
+                Bracelets
               </Link>
             </li>
             <li>
-              <Link to="/boutique" search={{ cat: "ecouteurs" } as never} className="hover:text-primary transition-smooth">
-                Écouteurs
+              <Link to="/boutique" search={{ cat: "bagues" } as never} className="hover:text-primary transition-smooth">
+                Bagues
+              </Link>
+            </li>
+            <li>
+              <Link to="/boutique" search={{ cat: "colliers" } as never} className="hover:text-primary transition-smooth">
+                Colliers
               </Link>
             </li>
           </ul>
