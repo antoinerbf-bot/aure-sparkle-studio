@@ -11,7 +11,7 @@ export const Route = createFileRoute("/a-propos")({
       {
         name: "description",
         content:
-          "L'histoire d'Auré, créatrice indépendante de bijoux faits main et d'écouteurs design en or rosé.",
+          "L'histoire d'Auré, créatrice indépendante de bijoux faits main : bracelets, bagues et colliers en finition dorée.",
       },
       { property: "og:title", content: "À propos — Les Créations d'Auré" },
       {
@@ -62,7 +62,7 @@ function AboutPage() {
               {" "}
               Discrètes, lumineuses, intemporelles.
             </span>{" "}
-            Des objets qui accompagnent les histoires plutôt que de les
+            Des bijoux qui accompagnent les histoires plutôt que de les
             raconter. »
           </p>
         </Reveal>
@@ -94,20 +94,20 @@ function AboutPage() {
               <div className="mt-8 space-y-6 text-base leading-relaxed text-muted-foreground">
                 <p>
                   Les Créations d'Auré est née du désir de créer en toute
-                  liberté. Loin des grands volumes, chaque pièce est pensée,
-                  dessinée et assemblée dans notre atelier — à la main, en
+                  liberté. Loin des grands volumes, chaque bijou est pensé,
+                  dessiné et assemblé dans notre atelier — à la main, en
                   petites séries.
                 </p>
                 <p>
-                  Nous travaillons les matières nobles : l'or rosé 18 carats,
-                  les perles d'eau douce, les pierres semi-précieuses choisies
-                  une à une. Notre signature ? Une élégance épurée, féminine,
-                  qui s'inscrit dans le temps.
+                  Nous travaillons des matières choisies avec soin : chaînes
+                  plaquées or, perles d'eau douce, pierres naturelles
+                  sélectionnées une à une. Notre signature ? Une élégance
+                  épurée, féminine, qui s'inscrit dans le temps.
                 </p>
                 <p>
-                  En 2024, nous avons élargi notre univers à l'écoute, avec la
-                  collection Aura : des écouteurs design en finition or rosé,
-                  pensés comme des bijoux d'écoute.
+                  Bracelets, bagues, colliers : chaque pièce est une promesse
+                  d'éclat discret. Une déclaration douce, qui se porte au
+                  quotidien et traverse les saisons.
                 </p>
               </div>
             </Reveal>
@@ -131,7 +131,7 @@ function AboutPage() {
             {
               n: "01",
               t: "Imaginé",
-              d: "Chaque pièce naît d'un croquis, d'une intuition, d'une émotion.",
+              d: "Chaque bijou naît d'un croquis, d'une intuition, d'une émotion.",
             },
             {
               n: "02",

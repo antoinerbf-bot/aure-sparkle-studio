@@ -1,26 +1,14 @@
-import necklace from "@/assets/necklace.jpg";
-import necklace2 from "@/assets/necklace-2.jpg";
-import necklace3 from "@/assets/necklace-3.jpg";
-import rings from "@/assets/rings.jpg";
-import rings2 from "@/assets/rings-2.jpg";
-import rings3 from "@/assets/rings-3.jpg";
-import bracelet from "@/assets/bracelet.jpg";
-import bracelet2 from "@/assets/bracelet-2.jpg";
-import bracelet3 from "@/assets/bracelet-3.jpg";
-import earrings from "@/assets/earrings.jpg";
-import earrings2 from "@/assets/earrings-2.jpg";
-import earrings3 from "@/assets/earrings-3.jpg";
-import earbudsHero from "@/assets/earbuds-hero.jpg";
-import earbudsPro2 from "@/assets/earbuds-pro-2.jpg";
-import earbudsPro3 from "@/assets/earbuds-pro-3.jpg";
-import earbudsCase from "@/assets/earbuds-case.jpg";
-import earbudsClassic2 from "@/assets/earbuds-classic-2.jpg";
-import earbudsClassic3 from "@/assets/earbuds-classic-3.jpg";
-import earbudSingle from "@/assets/earbud-single.jpg";
-import earbudsMini2 from "@/assets/earbuds-mini-2.jpg";
-import earbudsMini3 from "@/assets/earbuds-mini-3.jpg";
+import braceletPearl from "@/assets/bracelet-pearl.jpg";
+import braceletBeads from "@/assets/bracelet-beads.jpg";
+import braceletCharm from "@/assets/bracelet-charm.jpg";
+import ringSignet from "@/assets/ring-signet.jpg";
+import ringStack from "@/assets/ring-stack.jpg";
+import ringPearl from "@/assets/ring-pearl.jpg";
+import necklacePearl from "@/assets/necklace-pearl.jpg";
+import necklaceStar from "@/assets/necklace-star.jpg";
+import necklaceLayered from "@/assets/necklace-layered.jpg";
 
-export type Category = "bijoux" | "ecouteurs";
+export type Category = "bracelets" | "bagues" | "colliers";
 
 export type Product = {
   slug: string;
@@ -35,123 +23,160 @@ export type Product = {
 };
 
 export const products: Product[] = [
+  // BRACELETS
   {
-    slug: "collier-perle-aurore",
-    name: "Collier Aurore",
-    category: "bijoux",
-    price: 89,
-    image: necklace,
-    images: [necklace, necklace2, necklace3],
-    tagline: "Perle d'eau douce, chaîne or rosé 18k",
+    slug: "bracelet-perle-douce",
+    name: "Bracelet Perle Douce",
+    category: "bracelets",
+    price: 58,
+    image: braceletPearl,
+    images: [braceletPearl, braceletPearl, braceletPearl],
+    tagline: "Chaîne fine dorée, perle d'eau douce",
     description:
-      "Une perle naturelle suspendue à une chaîne fine en or rosé. Pensée pour être portée seule ou superposée, elle accompagne chaque moment avec délicatesse.",
+      "Une chaîne délicate sublimée par une perle d'eau douce. Une pièce signature à porter seule ou superposée pour un poignet lumineux.",
     details: [
-      "Perle d'eau douce sélectionnée à la main",
-      "Chaîne plaquée or rosé 18 carats",
-      "Longueur ajustable 40-45 cm",
+      "Chaîne plaquée or fin",
+      "Perle d'eau douce naturelle",
+      "Longueur ajustable 16-19 cm",
       "Fait main dans notre atelier",
     ],
   },
   {
-    slug: "anneaux-duo-soleil",
-    name: "Duo Soleil",
-    category: "bijoux",
-    price: 65,
-    image: rings,
-    images: [rings, rings2, rings3],
-    tagline: "Deux anneaux fins or rosé",
+    slug: "bracelet-perles-soleil",
+    name: "Bracelet Soleil",
+    category: "bracelets",
+    price: 52,
+    image: braceletBeads,
+    images: [braceletBeads, braceletBeads, braceletBeads],
+    tagline: "Perles dorées et pierre naturelle",
     description:
-      "Un duo épuré pensé pour s'empiler ou se porter séparément. La promesse d'un éclat discret au quotidien.",
+      "Inspiré des étés dorés, ce bracelet associe perles dorées et pierre naturelle. Élastique, confortable, lumineux.",
     details: [
-      "Lot de 2 anneaux",
-      "Plaqué or rosé 18 carats",
-      "Tailles disponibles : 50 à 58",
-      "Garanti sans nickel",
-    ],
-  },
-  {
-    slug: "bracelet-charme-etoile",
-    name: "Bracelet Étoile",
-    category: "bijoux",
-    price: 55,
-    image: bracelet,
-    images: [bracelet, bracelet2, bracelet3],
-    tagline: "Charme étoile, chaîne fine or rosé",
-    description:
-      "Un bracelet délicat orné d'un charme étoile, symbole de lumière. La signature parfaite d'un poignet élégant.",
-    details: [
-      "Charme étoile en or rosé",
-      "Fermoir mousqueton ajustable",
-      "Longueur 16-19 cm",
+      "Perles dorées hématite",
+      "Pierre centrale en agate",
+      "Élastique souple haute qualité",
       "Hypoallergénique",
     ],
   },
   {
-    slug: "creoles-luna",
-    name: "Créoles Luna",
-    category: "bijoux",
+    slug: "bracelet-charme-coeur",
+    name: "Bracelet Loves",
+    category: "bracelets",
+    price: 62,
+    image: braceletCharm,
+    images: [braceletCharm, braceletCharm, braceletCharm],
+    tagline: "Charme cœur gravé, maille dorée",
+    description:
+      "Une maille forçat dorée et un charme cœur gravé « Loves ». La déclaration douce d'un poignet aimé.",
+    details: [
+      "Charme cœur gravé acier doré",
+      "Maille forçat plaquée or",
+      "Fermoir mousqueton ajustable",
+      "Édition limitée",
+    ],
+  },
+  // BAGUES
+  {
+    slug: "bague-signet-or",
+    name: "Bague Signet",
+    category: "bagues",
+    price: 68,
+    image: ringSignet,
+    images: [ringSignet, ringSignet, ringSignet],
+    tagline: "Anneau lisse doré, finition mate",
+    description:
+      "L'essence de la simplicité. Une bague signet aux lignes pures, à porter au quotidien comme une seconde peau.",
+    details: [
+      "Acier inoxydable plaqué or",
+      "Finition mate satinée",
+      "Tailles disponibles 50 à 58",
+      "Garantie sans nickel",
+    ],
+  },
+  {
+    slug: "bague-duo-anneaux",
+    name: "Duo d'Anneaux",
+    category: "bagues",
+    price: 54,
+    image: ringStack,
+    images: [ringStack, ringStack, ringStack],
+    tagline: "Deux anneaux fins entrelacés",
+    description:
+      "Deux anneaux fins entrelacés pour un effet stack délicat. Pensés pour s'empiler ou se porter seuls.",
+    details: [
+      "Lot de 2 anneaux fins",
+      "Plaqué or 18k brillant",
+      "Tailles 50 à 58",
+      "Hypoallergénique",
+    ],
+  },
+  {
+    slug: "bague-perle-luna",
+    name: "Bague Luna",
+    category: "bagues",
     price: 49,
-    image: earrings,
-    images: [earrings, earrings2, earrings3],
-    tagline: "Créoles épurées or rosé",
+    image: ringPearl,
+    images: [ringPearl, ringPearl, ringPearl],
+    tagline: "Perle blanche sertie, anneau fin",
     description:
-      "L'essentiel à porter tous les jours. Des créoles parfaitement équilibrées, douces sur l'oreille, lumineuses sur la peau.",
+      "Une perle blanche posée comme une lune sur un anneau d'une finesse extrême. Romantique et intemporel.",
     details: [
-      "Diamètre 18 mm",
-      "Plaqué or rosé 3 microns",
-      "Fermoir cliquet sécurisé",
-      "Légères et confortables",
+      "Perle d'eau douce 5 mm",
+      "Anneau fin plaqué or",
+      "Tailles 50 à 58",
+      "Fait main",
+    ],
+  },
+  // COLLIERS
+  {
+    slug: "collier-perle-aurore",
+    name: "Collier Aurore",
+    category: "colliers",
+    price: 78,
+    image: necklacePearl,
+    images: [necklacePearl, necklacePearl, necklacePearl],
+    tagline: "Perle d'eau douce sur chaîne dorée",
+    description:
+      "Une perle naturelle suspendue à une chaîne fine dorée. Délicat, lumineux, parfait à porter seul ou superposé.",
+    details: [
+      "Perle d'eau douce sélectionnée",
+      "Chaîne plaquée or fin",
+      "Longueur ajustable 40-45 cm",
+      "Fait main",
     ],
   },
   {
-    slug: "ecouteurs-aura-pro",
-    name: "Aura Pro",
-    category: "ecouteurs",
-    price: 149,
-    image: earbudsHero,
-    images: [earbudsHero, earbudsPro2, earbudsPro3],
-    tagline: "Écouteurs sans fil — finition or rosé mat",
+    slug: "collier-etoile",
+    name: "Collier Étoile",
+    category: "colliers",
+    price: 65,
+    image: necklaceStar,
+    images: [necklaceStar, necklaceStar, necklaceStar],
+    tagline: "Pendentif étoile, chaîne dorée",
     description:
-      "Un design pensé comme un bijou. Réduction de bruit active, son haute définition et autonomie de 32 h. La technologie au service de l'élégance.",
+      "Une étoile dorée suspendue à une chaîne fine. Symbole de lumière, à porter comme un porte-bonheur du quotidien.",
     details: [
-      "Réduction de bruit active",
-      "Bluetooth 5.3 — codec aptX",
-      "Autonomie 8h + 24h avec boîtier",
-      "Charge sans fil Qi",
+      "Pendentif étoile en acier doré",
+      "Chaîne fine plaquée or",
+      "Longueur ajustable 38-43 cm",
+      "Hypoallergénique",
     ],
   },
   {
-    slug: "ecouteurs-aura-classic",
-    name: "Aura Classic",
-    category: "ecouteurs",
-    price: 119,
-    image: earbudsCase,
-    images: [earbudsCase, earbudsClassic2, earbudsClassic3],
-    tagline: "Boîtier marbre & or rosé",
-    description:
-      "L'écoute confortable au quotidien dans un boîtier signature. Une pièce à exposer autant qu'à utiliser.",
-    details: [
-      "Bluetooth 5.2",
-      "Autonomie 6h + 18h",
-      "Boîtier finition marbre",
-      "Micros dual-array",
-    ],
-  },
-  {
-    slug: "ecouteurs-aura-mini",
-    name: "Aura Mini",
-    category: "ecouteurs",
+    slug: "collier-multirangs",
+    name: "Collier Multirangs",
+    category: "colliers",
     price: 89,
-    image: earbudSingle,
-    images: [earbudSingle, earbudsMini2, earbudsMini3],
-    tagline: "Le plus compact de la collection",
+    image: necklaceLayered,
+    images: [necklaceLayered, necklaceLayered, necklaceLayered],
+    tagline: "Trois chaînes dorées superposées",
     description:
-      "Ultra léger, ultra discret. Le compagnon parfait pour les esprits libres qui ne se séparent jamais de leur musique.",
+      "L'effet layering parfait, déjà composé. Trois chaînes dorées de mailles différentes, à porter ensemble.",
     details: [
-      "3,8g par écouteur",
-      "Bluetooth 5.2",
-      "Autonomie 5h + 15h",
-      "Résistance IPX4",
+      "3 chaînes plaquées or",
+      "Mailles forçat, gourmette, vénitienne",
+      "Longueurs 38, 42, 46 cm",
+      "Édition signature",
     ],
   },
 ];

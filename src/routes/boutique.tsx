@@ -6,23 +6,23 @@ import { products, type Category } from "@/lib/products";
 import { z } from "zod";
 
 const searchSchema = z.object({
-  cat: z.enum(["bijoux", "ecouteurs"]).optional(),
+  cat: z.enum(["bracelets", "bagues", "colliers"]).optional(),
 });
 
 export const Route = createFileRoute("/boutique")({
   validateSearch: searchSchema,
   head: () => ({
     meta: [
-      { title: "Boutique — Les Créations d'Auré" },
+      { title: "Boutique — Bracelets, Bagues, Colliers | Les Créations d'Auré" },
       {
         name: "description",
         content:
-          "Découvrez tous les bijoux et écouteurs design Les Créations d'Auré. Or rosé, fait main, édition limitée.",
+          "Découvrez tous les bijoux faits main Les Créations d'Auré : bracelets, bagues et colliers en finition dorée. Pièces uniques, édition limitée.",
       },
       { property: "og:title", content: "Boutique — Les Créations d'Auré" },
       {
         property: "og:description",
-        content: "Bijoux et écouteurs design en or rosé.",
+        content: "Bijoux faits main : bracelets, bagues, colliers.",
       },
     ],
   }),
@@ -48,8 +48,9 @@ function BoutiquePage() {
 
   const filters: { value: Category | "all"; label: string }[] = [
     { value: "all", label: "Tout" },
-    { value: "bijoux", label: "Bijoux" },
-    { value: "ecouteurs", label: "Écouteurs" },
+    { value: "bracelets", label: "Bracelets" },
+    { value: "bagues", label: "Bagues" },
+    { value: "colliers", label: "Colliers" },
   ];
 
   return (
@@ -64,9 +65,9 @@ function BoutiquePage() {
               La <span className="italic">collection</span>
             </h1>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
-              Chaque pièce est imaginée, dessinée et assemblée à la main.
-              Bijoux d'or rosé et écouteurs design — l'art du détail dans
-              chaque création.
+              Chaque pièce est imaginée, dessinée et assemblée à la main. Des
+              bracelets, des bagues, des colliers — l'art du détail dans chaque
+              création.
             </p>
           </Reveal>
         </div>
