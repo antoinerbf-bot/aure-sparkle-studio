@@ -25,13 +25,15 @@ export function Header() {
       className={`fixed inset-x-0 top-0 z-50 transition-luxe ${
         scrolled
           ? "bg-background/85 backdrop-blur-xl border-b border-border/60"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-black/50 to-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
         <Link
           to="/"
-          className="font-display text-xl tracking-wide text-foreground transition-smooth hover:text-primary"
+          className={`font-display text-xl tracking-wide transition-smooth hover:text-primary ${
+            scrolled ? "text-foreground" : "text-white drop-shadow-md"
+          }`}
         >
           Les Créations <span className="italic text-primary">d'Auré</span>
         </Link>
@@ -41,8 +43,12 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="group relative text-sm uppercase tracking-[0.18em] text-muted-foreground transition-smooth hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
+              className={`group relative text-sm uppercase tracking-[0.18em] transition-smooth ${
+                scrolled
+                  ? "text-muted-foreground hover:text-foreground"
+                  : "text-white/95 hover:text-white drop-shadow-md"
+              }`}
+              activeProps={{ className: scrolled ? "text-foreground" : "text-white" }}
             >
               {n.label}
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-primary transition-all duration-500 group-hover:w-full" />
@@ -53,7 +59,9 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link
             to="/boutique"
-            className="hidden items-center gap-2 text-sm text-foreground transition-smooth hover:text-primary md:inline-flex"
+            className={`hidden items-center gap-2 text-sm transition-smooth hover:text-primary md:inline-flex ${
+              scrolled ? "text-foreground" : "text-white drop-shadow-md"
+            }`}
           >
             <ShoppingBag className="h-4 w-4" />
             <span className="uppercase tracking-[0.18em]">Panier</span>
@@ -62,7 +70,7 @@ export function Header() {
             type="button"
             aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden text-foreground"
+            className={`md:hidden ${scrolled ? "text-foreground" : "text-white drop-shadow-md"}`}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
