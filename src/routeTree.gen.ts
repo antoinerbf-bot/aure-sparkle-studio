@@ -14,6 +14,7 @@ import { Route as BoutiqueRouteImport } from './routes/boutique'
 import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProduitSlugRouteImport } from './routes/produit.$slug'
+import { Route as ApiInstagramRouteImport } from './routes/api/instagram'
 
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
@@ -40,12 +41,18 @@ const ProduitSlugRoute = ProduitSlugRouteImport.update({
   path: '/produit/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiInstagramRoute = ApiInstagramRouteImport.update({
+  id: '/api/instagram',
+  path: '/api/instagram',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/boutique': typeof BoutiqueRoute
   '/contact': typeof ContactRoute
+  '/api/instagram': typeof ApiInstagramRoute
   '/produit/$slug': typeof ProduitSlugRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/a-propos': typeof AProposRoute
   '/boutique': typeof BoutiqueRoute
   '/contact': typeof ContactRoute
+  '/api/instagram': typeof ApiInstagramRoute
   '/produit/$slug': typeof ProduitSlugRoute
 }
 export interface FileRoutesById {
@@ -61,19 +69,33 @@ export interface FileRoutesById {
   '/a-propos': typeof AProposRoute
   '/boutique': typeof BoutiqueRoute
   '/contact': typeof ContactRoute
+  '/api/instagram': typeof ApiInstagramRoute
   '/produit/$slug': typeof ProduitSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/a-propos' | '/boutique' | '/contact' | '/produit/$slug'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/boutique'
+    | '/contact'
+    | '/api/instagram'
+    | '/produit/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/a-propos' | '/boutique' | '/contact' | '/produit/$slug'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/boutique'
+    | '/contact'
+    | '/api/instagram'
+    | '/produit/$slug'
   id:
     | '__root__'
     | '/'
     | '/a-propos'
     | '/boutique'
     | '/contact'
+    | '/api/instagram'
     | '/produit/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -82,6 +104,7 @@ export interface RootRouteChildren {
   AProposRoute: typeof AProposRoute
   BoutiqueRoute: typeof BoutiqueRoute
   ContactRoute: typeof ContactRoute
+  ApiInstagramRoute: typeof ApiInstagramRoute
   ProduitSlugRoute: typeof ProduitSlugRoute
 }
 
@@ -122,6 +145,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProduitSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/instagram': {
+      id: '/api/instagram'
+      path: '/api/instagram'
+      fullPath: '/api/instagram'
+      preLoaderRoute: typeof ApiInstagramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -130,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   AProposRoute: AProposRoute,
   BoutiqueRoute: BoutiqueRoute,
   ContactRoute: ContactRoute,
+  ApiInstagramRoute: ApiInstagramRoute,
   ProduitSlugRoute: ProduitSlugRoute,
 }
 export const routeTree = rootRouteImport
